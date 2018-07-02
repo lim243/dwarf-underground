@@ -1,5 +1,11 @@
 import React, {Component} from 'react'
 
+const RenderComment = (props) => {
+    return (
+      <li>{props.comment}</li>
+    )
+  }
+
 class CommentForm extends Component {
     constructor(props) {
       super(props);
@@ -15,15 +21,6 @@ class CommentForm extends Component {
     handleChange(event) {
       this.setState({value: event.target.value});
     }
-  
-    // handleSubmit(event) {
-    // //   alert('A name was submitted: ' + this.state.value);
-    //   event.preventDefault();
-    //   this.setState({
-    //       value: ''
-
-    //     })
-    // }
 
     handleSubmit = (event) => {
         event.preventDefault();
@@ -33,18 +30,22 @@ class CommentForm extends Component {
         this.setState({
             comments: comments,
         })
-        console.log(this.state.value)
-        debugger
+
     }
   
     render() {
       return (
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            <input type="text" id="commentForm" value={this.state.value} onChange={this.handleChange} />
-          </label>
-          <input type="submit" id="commentForm" value="Add Comment" />
-        </form>
+        <div>
+            <form onSubmit={this.handleSubmit}>
+            <label>
+                <input type="text" id="commentForm" value={this.state.value} onChange={this.handleChange} />
+            </label>
+            <input type="submit" id="commentForm" value="Add Comment" />
+            </form>
+            <ul>
+                {this.state.comments.map(currentComment => <RenderComment comment={currentComment} />)}
+            </ul>
+        </div>
       );
     }
   }
