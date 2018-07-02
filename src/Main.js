@@ -2,6 +2,7 @@ import React from 'react'
 
 import LeftArticle from './LeftArticle'
 import RightArticle from './RightArticle'
+import CommentForm from './CommentForm'
 
 import AdLinks from './AdLinks';
 
@@ -11,6 +12,8 @@ const Main = () => {
         <LeftArticle />
     
         <RightArticle />
+
+        <CommentForm />
 
         <AdLinks />
 
