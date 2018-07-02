@@ -25,11 +25,14 @@ class CommentForm extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         const comment = this.state.value
-        const comments = [...this.state.comments]
-        comments.push(comment)
-        this.setState({
-            comments: comments,
-        })
+        if(comment !== ''){
+            const comments = [...this.state.comments]
+            comments.push(comment)
+            this.setState({
+                comments: comments,
+                value: '',
+            })
+        }
 
     }
   
