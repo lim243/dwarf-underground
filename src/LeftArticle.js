@@ -3,16 +3,16 @@ import React from 'react'
 
 import Avatar from './Avatar';
 import ArticleLinks from './ArticleLinks';
-import Large8ArticleBody from './Large8ArticleBody';
+import LeftArticleParagraph from './LeftArticleParagraph';
 
-const Large8 = () => {
+const LeftArticle = () => {
     return (
     <div className="large-8 medium-12 columns article">
         <h2 className="article-title">Gold Madness - Fact or Fiction?</h2>
         
             <Avatar />
 
-        <Large8ArticleBody />
+        <LeftArticleParagraph />
 
         <ArticleLinks />
 
@@ -20,4 +20,4 @@ const Large8 = () => {
     )
 }
 
-export default Large8
+export default LeftArticle

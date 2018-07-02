@@ -1,17 +1,20 @@
 import React from 'react'
 
-import Large8 from './Large8'
-import Large4 from './Large4'
-import OtherArticles from './OtherArticles';
+import LeftArticle from './LeftArticle'
+import RightArticle from './RightArticle'
+
+import AdLinks from './AdLinks';
 
 const Main = () => {
     return (
     <main className="expanded row">
-        <Large8 />
+        <LeftArticle />
     
-        <Large4 />
+        <RightArticle />
 
-        <OtherArticles />
+        <AdLinks />
+
+
     </main>
     )
 }

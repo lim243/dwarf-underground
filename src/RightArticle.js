@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Large4 = () => {
+const RightArticle = () => {
     return (
     <aside className="large-4 medium-12 columns">
         <div className="ad">
@@ -18,4 +18,4 @@ const Large4 = () => {
     )
 }
 
-export default Large4
+export default RightArticle
