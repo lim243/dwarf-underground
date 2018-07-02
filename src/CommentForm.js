@@ -12,6 +12,7 @@ class CommentForm extends Component {
       this.state = {
           value: '',
           comments: [],
+          visibility: false,
         };
   
       this.handleChange = this.handleChange.bind(this);
@@ -33,7 +34,6 @@ class CommentForm extends Component {
                 value: '',
             })
         }
-
     }
   
     render() {
@@ -41,9 +41,14 @@ class CommentForm extends Component {
         <div>
             <form onSubmit={this.handleSubmit}>
             <label>
-                <input type="text" id="commentForm" value={this.state.value} onChange={this.handleChange} />
+                <input type="text" 
+                    onClick={this.setState({visibility: true})} 
+                    value={this.state.value} 
+                    onChange={this.handleChange} 
+                    placeholder='Add a comment'
+                />
             </label>
-            <input type="submit" id="commentForm" value="Add Comment" />
+            <input type="submit" value="Add Comment" />
             </form>
             <ul>
                 {this.state.comments.map(currentComment => <RenderComment comment={currentComment} />)}
