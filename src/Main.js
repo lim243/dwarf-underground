@@ -2,7 +2,6 @@ import React from 'react'
 
 import LeftArticle from './LeftArticle'
 import RightArticle from './RightArticle'
-
 import AdLinks from './AdLinks';
 
 const Main = () => {

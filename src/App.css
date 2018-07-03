@@ -256,6 +256,14 @@ footer h6 {
   display: inline-block;
 }
 
+.form {
+  background-color: #B69C22;
+}
+
+.commentBox {
+  display: none;
+}
+
 
 
 
